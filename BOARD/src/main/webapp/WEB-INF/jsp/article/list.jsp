@@ -12,7 +12,7 @@
 <title>커뮤니티 사이트  - 게시물 리스트</title>
 </head>
 <body>
-	
+	<h1>게시물 리스트</h1>
 	<!-- el문법을 사용하면, request.getAttribute 할 필요가 없다. -->
 	<h2>v2</h2>
 		<c:forEach items="${list}" var="article">
@@ -26,6 +26,5 @@
 		<hr>
 		</c:forEach>
 <!-- el문법 -->
- ${list}
 </body>
 </html>
