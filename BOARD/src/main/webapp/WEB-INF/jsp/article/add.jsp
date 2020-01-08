@@ -7,13 +7,48 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
+<style>
+	.con {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	
+	.common-form > div > * {
+		float: left;
+	}
+	
+	.common-form > div::after {
+	content: "";
+	display:block;
+	clear:both;
+	}
+	
+	.common-form > div > span {
+		background-color : yellow;
+		width:50px;
+	}
+	
+	.common-form > div > div {
+		width: calc(100% - 50px);
+	}
+	
+	 .common-form > div > div > textarea {
+		width:90%;
+	}
+	
+	
+</style>
+
+
 <meta charset="UTF-8">
 <title>커뮤니티 사이트 - 게시물 작성</title>
 </head>
 <body>
 	<h1>게시물 작성</h1>
-	<form action="./doAdd" method="POST" onsubmit="submitAddForm(this); return false;">
+	<form class="con common-form" action="./doAdd" method="POST"
+	onsubmit="submitAddForm(this); return false;">
 		<div>
 			<span>
 				제목
@@ -31,5 +66,15 @@
 				<textarea placeholder="내용"></textarea>
 			</div>
 		</div>
+		
+		<div>
+			<span> 작성 </span>
+			<div>
+				<input type="submit" value="작성">
+				<input type="reset" value="취소" onclick="history.back()">
+			</div>
+		</div>
+		
+		</form>
 </body>
 </html>
