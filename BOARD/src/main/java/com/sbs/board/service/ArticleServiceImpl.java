@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.sbs.board.dao.ArticleDao;
 import com.sbs.board.dto.Article;
+import com.sbs.board.util.CUtil;
 @Service
 public class ArticleServiceImpl implements ArticleService  {
 	@Autowired
@@ -24,9 +25,7 @@ public class ArticleServiceImpl implements ArticleService  {
 	public long add(Map<String, Object> param) {
 		articleDao.add(param);
 
-		BigInteger numId = (BigInteger)(param.get("id"));
-		long newId = numId.longValue();
-		return newId;
+		return CUtil.getAsLong(param.get("id"));
 	
 	}
 	

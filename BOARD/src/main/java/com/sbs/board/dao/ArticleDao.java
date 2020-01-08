@@ -12,6 +12,4 @@ public interface ArticleDao {
 	
 	public long add(Map<String, Object> param);
 
-	
-	
 }
