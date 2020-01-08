@@ -9,6 +9,7 @@
 <html>
 
 <head>
+
 <style>
 	.con {
 		width: 1000px;
@@ -46,6 +47,34 @@
 <title>커뮤니티 사이트 - 게시물 작성</title>
 </head>
 <body>
+
+		<script>
+		function submitAddForm(form){
+		form.title.value = form.title.value.trim();
+		if(form.title.value == 0){
+			alert('제목을 입력해주세요.');
+			form.title.focus();
+		
+			return false;
+			}
+			form.submit();
+		}
+
+
+		function submitAddForm(form){
+			form.body.value = form.body.value.trim();
+			if(form.body.value == 0){
+				alert('내용을 입력해주세요.');
+				form.body.focus();
+			
+				return false;
+				}
+				form.submit();
+			}
+		
+		</script>
+
+
 	<h1>게시물 작성</h1>
 	<form class="con common-form" action="./doAdd" method="POST"
 	onsubmit="submitAddForm(this); return false;">
@@ -54,7 +83,7 @@
 				제목
 			</span>
 			<div>
-				<input type="text" placeholder="제목" autofocus="autofocus">
+				<input type="text" name="title" placeholder="제목" autofocus="autofocus">
 			</div>
 		</div>
 		
@@ -63,7 +92,7 @@
 				내용
 			</span>
 			<div>
-				<textarea placeholder="내용"></textarea>
+				<textarea name ="body" placeholder="내용"></textarea>
 			</div>
 		</div>
 		
