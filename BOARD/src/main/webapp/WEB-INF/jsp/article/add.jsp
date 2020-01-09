@@ -4,10 +4,8 @@
 <%@ page import="com.sbs.board.dto.Article"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-
 <!DOCTYPE html>
 <html>
-
 <head>
 
 <style>
@@ -92,11 +90,10 @@
 		<div>
 			<span> 작성 </span>
 			<div>
-				<input type="submit" value="작성"> <input type="reset"
-					value="취소" onclick="history.back()">
+				<input type="submit" value="작성"> 
+				<input type="reset"	value="취소" onclick="history.back()">
 			</div>
 		</div>
-
 	</form>
 </body>
 </html>
