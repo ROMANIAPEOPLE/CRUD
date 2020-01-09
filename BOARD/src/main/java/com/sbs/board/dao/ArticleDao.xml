@@ -6,12 +6,15 @@
 	</select>
 	
 	<select id ="getTotalCount" parameterType="map" resultType ="int">
-		
 		SELECT COUNT(*)
 		FROM article
-	
 	</select>
 	
+	<select id="getOne" parameterType="map" resultType="Article">
+		SELECT * 
+		FROM article
+		WHERE id = #{id}
+	</select>
 	
 	
 	<insert id="add" parameterType="map" useGeneratedKeys= "true"

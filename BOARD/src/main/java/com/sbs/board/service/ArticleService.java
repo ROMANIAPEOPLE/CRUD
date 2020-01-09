@@ -13,5 +13,7 @@ public interface ArticleService {
 
 	public int getTotalCount();
 
+	public Article getOne(long id);
+
 
 }

@@ -25,8 +25,7 @@
 		<hr>
 		</c:forEach>
 		
-		<div class="btns con">
-	<a href="./add">게시물 추가</a>
+		<a href="./add">게시물 추가</a>
 		
 <!-- el문법 -->
 </body>
