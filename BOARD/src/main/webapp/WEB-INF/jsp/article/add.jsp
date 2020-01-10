@@ -13,29 +13,6 @@
 	width: 1000px;
 	margin: 0 auto;
 }
-
-.common-form>div>* {
-	float: left;
-}
-
-.common-form>div::after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.common-form>div>span {
-	background-color: yellow;
-	width: 50px;
-}
-
-.common-form>div>div {
-	width: calc(100% - 50px);
-}
-
-.common-form>div>div>textarea {
-	width: 90%;
-}
 </style>
 <meta charset="UTF-8">
 <title>커뮤니티 사이트 - 게시물 작성</title>
@@ -75,6 +52,7 @@
 			<div>
 				<input type="text" name="title" placeholder="제목"
 					autofocus="autofocus">
+					
 			</div>
 		</div>
 

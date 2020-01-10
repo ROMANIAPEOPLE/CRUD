@@ -17,6 +17,7 @@ import groovy.util.logging.Slf4j;
 public class ArticleController {
 	@Autowired
 	ArticleService articleService;
+	
 	@RequestMapping("/article/detail")
 	public String showDetail(Model model, long id) {
 		Article article = articleService.getOne(id);
@@ -50,8 +51,7 @@ public class ArticleController {
 	public String doAdd(@RequestParam Map<String, Object> param) {
 		//id 값을 제목과 내용을 추가할 때, 함께 가져와서 newId에 저장한다.
 		long newId = articleService.add(param);
-		
-		String msg = newId + "번 게시물이 추가되었습니다..";
+		String msg = newId + "번 게시물이 추가되었습니다.";
 		StringBuilder sb = new StringBuilder();
 		sb.append("alert('" + msg + "');"); // msg 팝업창을 띄운다.
 		sb.append("location.replace('./detail?id=" + newId + "');");
