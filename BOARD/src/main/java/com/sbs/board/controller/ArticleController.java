@@ -60,4 +60,21 @@ public class ArticleController {
 		sb.append("</script>");
 		return sb.toString();
 	}
+	
+	@RequestMapping("/article/doDelete")
+	@ResponseBody
+	public String doAdd(long id) {
+		//id 값을 제목과 내용을 추가할 때, 함께 가져와서 newId에 저장한다.
+		long newId = articleService.delete(id);
+		
+		String msg = id + "번 게시물이 삭제되었습니다.";
+		StringBuilder sb = new StringBuilder();
+		sb.append("alert('" + msg + "');"); // msg 팝업창을 띄운다.
+		sb.append("location.replace('./detail?id=" + newId + "');");
+		//location.replace를 통해 현재 창을  detail?newId 로 대체한다.
+		sb.insert(0, "<script>");
+		sb.append("</script>");
+		return sb.toString();
+	}
+	
 }
