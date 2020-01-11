@@ -14,7 +14,8 @@
 		<section>
 		<a href="./detail?id=${article.id}">
 		번호 : ${article.id}, 제목 :
-		${article.title}
+		${article.title}, 조회수 :
+		${article.hit}
 		</a>
 		</section>
 		<hr>

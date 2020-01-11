@@ -31,6 +31,10 @@ public class ArticleController {
 	public String showDetail(Model model, long id) {
 		Article article = articleService.getOne(id);
 		//특정 id값에 따른 list를 가져온다. 
+		
+		
+		articleService.hitUp(id);
+		
 		model.addAttribute("article", article);
 		//뷰에 뿌려준다
 		return "article/detail";

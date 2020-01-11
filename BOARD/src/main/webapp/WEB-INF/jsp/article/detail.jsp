@@ -12,6 +12,7 @@
 		번호 : ${article.id} <br>
 		제목 : ${article.title} <br>
 		내용: ${article.body} <br>
+		조회: ${article.hit} <br>
 		날짜: ${article.regDate}
 		</section>
 	
