@@ -13,9 +13,11 @@
 <link rel="stylesheet" href="/resource/common.css">
 </head>
 <body>
-	<h1>게시물 리스트</h1>
-	<h2>전체 게시물 개수 : ${totalCount}</h2>
+	<h1 class="con">게시물 리스트</h1>
+	<h2 class="con">전체 게시물 개수 : ${totalCount}</h2>
 	<!-- el문법을 사용하면, request.getAttribute 할 필요가 없다. -->
+	
+	<div class="con">
 		<c:forEach items="${list}" var="article">
 		<section>
 		번호 : ${article.id}, 제목 :
@@ -25,9 +27,11 @@
 		</section>
 		<hr>
 		</c:forEach>
-		
+	</div>
+	
+	<div class ="btns con">
 		<a href="./add">게시물 추가</a>
-		
+	</div>
 <!-- el문법 -->
 </body>
 </html>
