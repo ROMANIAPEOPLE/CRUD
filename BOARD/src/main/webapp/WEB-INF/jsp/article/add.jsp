@@ -40,7 +40,7 @@
 			}
 		
 		</script>
-	<h1>게시물 작성</h1>
+	<h1 class = "con">게시물 작성</h1>
 	<form class="con common-form" action="./doAdd" method="POST"
 		onsubmit="submitAddForm(this); return false;">
 		<div>
