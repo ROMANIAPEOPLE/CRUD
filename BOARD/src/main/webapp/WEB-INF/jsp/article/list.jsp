@@ -20,10 +20,10 @@
 	<div class="con">
 		<c:forEach items="${list}" var="article">
 		<section>
+		<a href="./detail?id=${article.id}">
 		번호 : ${article.id}, 제목 :
-		${article.title}, 내용 :
-		${article.body},날짜 :
-		${article.regDate}
+		${article.title}
+		</a>
 		</section>
 		<hr>
 		</c:forEach>

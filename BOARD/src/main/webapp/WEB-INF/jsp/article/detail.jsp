@@ -19,7 +19,8 @@
 		<section class="con">
 		번호 : ${article.id} <br>
 		제목 : ${article.title} <br>
-		내용: ${article.title}
+		내용: ${article.title} <br>
+		날짜: ${article.regDate}
 		</section>
 	
 	<div class ="btns con" >
