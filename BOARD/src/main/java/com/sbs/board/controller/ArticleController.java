@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.sbs.board.dto.Article;
 import com.sbs.board.service.ArticleService;
 import groovy.util.logging.Slf4j;
-
 @Controller
 @Slf4j // log.info 사용 , 디버깅 용도
 public class ArticleController {
@@ -27,12 +26,12 @@ public class ArticleController {
 		return "article/modify";
 	}
 	
+	
+	
 	@RequestMapping("/article/detail")
 	public String showDetail(Model model, long id) {
 		Article article = articleService.getOne(id);
 		//특정 id값에 따른 list를 가져온다. 
-		
-		
 		articleService.hitUp(id);
 		
 		model.addAttribute("article", article);
@@ -75,7 +74,6 @@ public class ArticleController {
 		return sb.toString();
 	}
 	
-	
 	@RequestMapping("/article/doModify")
 	@ResponseBody
 	public String doModify(@RequestParam Map<String, Object> param, long id) {
@@ -90,16 +88,12 @@ public class ArticleController {
 		sb.append("</script>");
 		return sb.toString();
 	}
-	
-	
-	
+
 	@RequestMapping("/article/doDelete")
 	@ResponseBody
 	public String doDelete(long id) {
 		//id 값을 제목과 내용을 추가할 때, 함께 가져와서 newId에 저장한다.
-
 		articleService.delete(id);
-		
 		String msg = id + "번 게시물이 삭제되었습니다.";
 		StringBuilder sb = new StringBuilder();
 		sb.append("alert('" + msg + "');"); // msg 팝업창을 띄운다.
@@ -109,5 +103,4 @@ public class ArticleController {
 		sb.append("</script>");
 		return sb.toString();
 	}
-	
 }

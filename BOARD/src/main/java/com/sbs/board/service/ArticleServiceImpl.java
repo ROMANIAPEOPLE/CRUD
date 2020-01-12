@@ -49,6 +49,4 @@ public class ArticleServiceImpl implements ArticleService  {
 	public void hitUp(long id) {
 		articleDao.hitUp(id);
 	}
-
-	
 }
