@@ -27,7 +27,6 @@
 		if(form.loginPwConfirm.value == 0){
 			alert('로그인PW확인란을 입력해주세요.');
 			form.loginPwConfirm.focus();
-		
 			return false;
 		}
 
