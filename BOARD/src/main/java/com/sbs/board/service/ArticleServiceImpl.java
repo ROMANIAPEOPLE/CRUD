@@ -7,14 +7,15 @@ import org.springframework.stereotype.Service;
 import com.sbs.board.dao.ArticleDao;
 import com.sbs.board.dto.Article;
 import com.sbs.board.util.CUtil;
+
 @Service
-public class ArticleServiceImpl implements ArticleService  {
+public class ArticleServiceImpl implements ArticleService {
 	@Autowired
 	ArticleDao articleDao;
-	
+
 	@Override
-	public List<Article> getList(){
-		//가짜데이터
+	public List<Article> getList() {
+		// 가짜데이터
 		return articleDao.getList();
 	}
 
@@ -28,23 +29,22 @@ public class ArticleServiceImpl implements ArticleService  {
 	public int getTotalCount() {
 		return articleDao.getTotalCount();
 	}
-	
+
 	@Override
 	public Article getOne(long id) {
 		return articleDao.getOne(id);
 	}
-	
+
 	@Override
 	public void delete(long id) {
 		articleDao.delete(id);
 	}
-	
+
 	@Override
 	public void modify(Map<String, Object> param) {
 		articleDao.modify(param);
 	}
-	
-	
+
 	@Override
 	public void hitUp(long id) {
 		articleDao.hitUp(id);

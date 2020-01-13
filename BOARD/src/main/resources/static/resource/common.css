@@ -14,15 +14,15 @@
 }
 
 .common-form>div>span {
-	width: 150px;
+	width: 100px;
 }
 
 .common-form>div>div {
-	width: calc(100% - 150px);
+	width: calc(100% - 100px);
 }
 
 .common-form>div>div>input[type="text"], .common-form>div>div>textarea, .common-form>div>div>input[type="password"] {
-	width: 90%;
+	width: 50%;
 }
 
 .top-menu-1 a::before {

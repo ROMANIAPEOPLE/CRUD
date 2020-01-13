@@ -31,32 +31,46 @@
 			return false;
 		}
 
+		if(form.loginPw.value != form.loginPwConfirm.value){
+			alert('PW와 PW confirm이 일치하지 않습니다.')
+			form.loginPwConfirm.focus();
+			return false;
+			}
+		
 		form.submit();
 	}
 </script>
-<form class="con common-form" action="./doAdd" method="POST"
+<form class="con common-form" action="./doJoin" method="POST"
 	onsubmit="submitJoinForm(this); return false;">
 	<div>
-		<span>로그인ID</span>
+		<span>ID</span>
 		<div>
 			<input type="text" name="loginId" placeholder="ID를 입력하세요."
 				autofocus="autofocus">
-
+		</div>
+	</div>
+	
+	<div>
+		<span>PW</span>
+		<div>
+			<input type="password" name="loginPw" placeholder="**********"
+				autofocus="autofocus">
+		</div>
+	</div>
+	
+	<div>
+		<span>PW confirm</span>
+		<div>
+			<input type=password name="loginPwConfirm" placeholder="**********"
+				autofocus="autofocus">
 		</div>
 	</div>
 
 	<div>
-		<span> 내용 </span>
+		<span>      　</span>
 		<div>
-			<textarea name="body" placeholder="내용"></textarea>
-		</div>
-	</div>
-
-	<div>
-		<span> 작성 </span>
-		<div>
-			<input type="submit" value="작성"> <input type="reset"
-				value="취소" onclick="history.back()">
+			<input type="submit" value="가입">
+			 <input type="reset" value="취소" >
 		</div>
 	</div>
 </form>
