@@ -17,7 +17,6 @@ public class HomeController {
 	@Autowired
 	MemberService memberService;
 	@RequestMapping("/home/main")
-	@ResponseBody
 	public String showMain(HttpSession session) {
 		long loginedMemberId =0;
 		
@@ -27,6 +26,13 @@ public class HomeController {
 		
 	Members loginedMember=	memberService.getOne(loginedMemberId);
 		
-		return "메인화면 입니다.";
+		return "/home/main";
 	}
+	
+	@RequestMapping("/")
+	public String showMain2() {
+		return "redirect:/home/main";
+		
+	}
+	
 }

@@ -69,7 +69,7 @@
 		<span>      　</span>
 		<div>
 			<input type="submit" value="가입">
-			 <input type="reset" value="취소" >
+			 <input type="reset" value="취소" onclick="history.back();" >
 		</div>
 	</div>
 </form>
