@@ -11,17 +11,16 @@
 
 	<insert id="join" parameterType="map" useGeneratedKeys="true"
 		keyProperty="id">
-		INSERT INTO member
+		INSERT INTO members
 		SET regDate = NOW(),
 		loginId =
 		#{loginId},
 		loginPw = #{loginPw}
 	</insert>
 
-	<select id="getMatchedOne" parameterType="string"
-		resultType="Members">
-		SELECT *
-		FROM member
+	<select id="getMatchedOne" parameterType="string" resultType="Members">
+		SELECT * 
+		FROM members
 		WHERE loginId = #{loginId}
 		AND loginPw = #{loginPw}
 	</select>
@@ -30,7 +29,6 @@
 		SELECT *
 		FROM members
 		WHERE id = #{id}
-	
 	</select>
 	
 	

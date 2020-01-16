@@ -26,6 +26,14 @@ public class MemberController {
 		return "member/login";
 	}
 
+	@RequestMapping("/member/doLogout")
+	public String doLogout(HttpSession session) {
+		session.removeAttribute("loginedMemberId");
+		return "redirect:/";
+		
+	}
+	
+	
 	@RequestMapping("/member/doLogin")
 	public String doLogin(@RequestParam Map<String, Object> param, Model model, HttpSession session) {
 		Members matchedMember = memberService.getMatchedOne((String) param.get("loginId"),
