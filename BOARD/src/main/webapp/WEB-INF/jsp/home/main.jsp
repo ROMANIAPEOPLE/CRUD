@@ -5,6 +5,10 @@
 <c:set var="pageName" value="메인" />
 <%@ include file="../part/head.jspf"%>
 
+<div>
+	테스트 넘버 : ${testNumber}
+</div>
+
 <c:if test="${loginedMember != null}">
 	<div class="con">회원 로그인 ID : ${loginedMember.loginId}</div>
 </c:if>
