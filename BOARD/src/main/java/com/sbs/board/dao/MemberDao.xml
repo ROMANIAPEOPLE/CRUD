@@ -13,8 +13,7 @@
 		keyProperty="id">
 		INSERT INTO members
 		SET regDate = NOW(),
-		loginId =
-		#{loginId},
+		loginId =#{loginId},
 		loginPw = #{loginPw}
 	</insert>
 

@@ -12,3 +12,17 @@
 </html>
 <body>
 	<h1 class="con">${pageName}</h1>
+
+	<div class ="top-menu-1 con">
+		<a href ="/home/main">메인</a>
+	
+		<c:if test = "${isLogined}">
+			<a href="/member/doLogout">로그아웃</a>
+			<a href="/article/list">게시판 이동</a>
+		</c:if>
+		
+		<c:if test = "${isLogined == false}">
+			<a href="/member/login">로그인</a>
+			<a href="/member/join">회원가입</a>
+		</c:if>
+	</div>
